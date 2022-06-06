@@ -17,6 +17,6 @@ resource "aws_iam_role" "github_oidc_role_policy" {
 }
 
 resource "aws_iam_role_policy_attachment" "github_oidc_role_attachment" {
-  policy_arn = data.aws_iam_policy.AWS_Admin.arn
+  policy_arn = "arn:aws:iam::aws:policy/job-function/SystemAdministrator"
   role       = aws_iam_role.github_oidc_role_policy.id
 }
